@@ -12,7 +12,7 @@ def index(request):
 
 def about(request):
     # Get realtor
-    realtors = Realtor.objects.order_by('-hire_data')
+    realtors = Realtor.objects.order_by('-hire_date')
     # Get mvp realtor
     mvp_realtors = Realtor.objects.all().filter(is_mvp=True)
     context = {
