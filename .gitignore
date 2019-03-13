@@ -25,6 +25,7 @@ var/
 *.log
 local_settings.py
 /static
+/media
 
 
 
