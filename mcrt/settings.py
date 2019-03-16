@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'mcrt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
-        'NAME': 'mcrt',
-        'USER': 'postgres',
-        'PASSWORD': 'Mc110164',
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'NAME': os.getenv('DB_NAME', 'mcrt_name'),
+        'USER': os.getenv('DB_USER', 'mcrt_user'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
     }
 }
 

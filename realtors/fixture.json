@@ -1,0 +1,41 @@
+[
+{
+    "model": "realtors.realtor",
+    "pk": 1,
+    "fields": {
+        "name": "Kyle Brown",
+        "photo": "photos/2019/03/13/kyle.jpg",
+        "description": "Fernando Herboso has 22 years experience as a real estate agent and broker in five states, and serves as a principal broker and consultant to other real estate professionals on using technology to improve their customer care, general marketing and office management.\r\n\r\nHonesty and integrity, along with determination and dedication, are philosophies that Fernando strives for in all aspects of his life. Applying these principles to his business, has allowed him to be a top producing real estate agent for the past 10 years. His background as a business owner for several business ventures and co-owner and founder for a Keller Williams Market Center has given his real estate business a high level of experience leadership and professionalism.\r\n\r\nFernando Herboso has a proven record of directly impacting his client\u2019s financial success and propelling smooth transactions by applying refined management, selling, and negotiation talents.\r\n\r\nIf you are planning on buying or selling in the Maryland DC and Virginia area contact Fernando Herboso, your local neighborhood expert for a personalized customer care. Fernando takes pride in servicing his clients by delivering exceptional service and establishing lifelong relationships.\u201d",
+        "phone": "555-555-555",
+        "email": "kyle@gmail.com",
+        "is_mvp": true,
+        "hire_date": "2019-03-13T21:51:40Z"
+    }
+},
+{
+    "model": "realtors.realtor",
+    "pk": 2,
+    "fields": {
+        "name": "Mark Cuban",
+        "photo": "photos/2019/03/13/mark.jpg",
+        "description": "Fernando Herboso has 22 years experience as a real estate agent and broker in five states, and serves as a principal broker and consultant to other real estate professionals on using technology to improve their customer care, general marketing and office management.\r\n\r\nHonesty and integrity, along with determination and dedication, are philosophies that Fernando strives for in all aspects of his life. Applying these principles to his business, has allowed him to be a top producing real estate agent for the past 10 years. His background as a business owner for several business ventures and co-owner and founder for a Keller Williams Market Center has given his real estate business a high level of experience leadership and professionalism.\r\n\r\nFernando Herboso has a proven record of directly impacting his client\u2019s financial success and propelling smooth transactions by applying refined management, selling, and negotiation talents.\r\n\r\nIf you are planning on buying or selling in the Maryland DC and Virginia area contact Fernando Herboso, your local neighborhood expert for a personalized customer care. Fernando takes pride in servicing his clients by delivering exceptional service and establishing lifelong relationships.\u201d",
+        "phone": "666-666-6666",
+        "email": "Mark@gmail.com",
+        "is_mvp": false,
+        "hire_date": "2019-03-13T21:55:45Z"
+    }
+},
+{
+    "model": "realtors.realtor",
+    "pk": 3,
+    "fields": {
+        "name": "Jenny Travel",
+        "photo": "photos/2019/03/13/jenny.jpg",
+        "description": "Fernando Herboso has 22 years experience as a real estate agent and broker in five states, and serves as a principal broker and consultant to other real estate professionals on using technology to improve their customer care, general marketing and office management.\r\n\r\nHonesty and integrity, along with determination and dedication, are philosophies that Fernando strives for in all aspects of his life. Applying these principles to his business, has allowed him to be a top producing real estate agent for the past 10 years. His background as a business owner for several business ventures and co-owner and founder for a Keller Williams Market Center has given his real estate business a high level of experience leadership and professionalism.\r\n\r\nFernando Herboso has a proven record of directly impacting his client\u2019s financial success and propelling smooth transactions by applying refined management, selling, and negotiation talents.\r\n\r\nIf you are planning on buying or selling in the Maryland DC and Virginia area contact Fernando Herboso, your local neighborhood expert for a personalized customer care. Fernando takes pride in servicing his clients by delivering exceptional service and establishing lifelong relationships.\u201d",
+        "phone": "777-777-7777",
+        "email": "Jenny@gmail.com",
+        "is_mvp": false,
+        "hire_date": "2019-03-13T21:56:18Z"
+    }
+}
+]
