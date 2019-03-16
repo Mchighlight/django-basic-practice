@@ -33,8 +33,7 @@ python manage.py makemigrations && python manage.py migrate
 Load database data 
 ```
 python manage.py loaddata \realtor\fixture.json && 
-python manage.py loaddata \listing\fixture.json &&
-python manage.py loaddata \contact\fixture.json &&
+python manage.py loaddata \listing\fixture.json 
 ```
 local起server
 ```

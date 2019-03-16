@@ -47,6 +47,3 @@ venv/
 .idea
 .vscode
 local_*
-*_test.py
-*.map
-celerybeat-schedule.db
