@@ -5,7 +5,7 @@
 後端由django framework寫成，前端則用bootstrap4及jquery
 webserve部署於Digital ocean上
 ### Domain
-未部署
+http://henryhuang.pro/
 # Develop Environment
 Windows 10 Home
 # Usage
