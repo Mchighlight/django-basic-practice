@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3hme!btafg08bv5^ueb)$(8(_g4)y0lo@sf4z4v*x(a0*@bao0'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'mcrt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
-        'NAME': 'mcrt',
-        'USER': 'dbadmin',
-        'PASSWORD': 'Mc110164',
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'NAME': os.getenv('DB_NAME', 'mcrt'),
+        'USER': os.getenv('DB_USER', 'user_name'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
     }
 }
 
@@ -140,13 +140,6 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR:'danger'
 }
-
-# Email config
-EMAIL_HOST = "smpt.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER=os.getenv('EMAIL_HOST_USER')
-EMAIL_HOT_PASSWORD = os.getenv('EMAIL_HOT_PASSWORD')
-EMAIL_USE_TLS=True
 
 try:
     from local_settings import *
