@@ -47,7 +47,7 @@ The server will then be available at http://127.0.0.1:8000
 
 #How to deploy on Digital Ocean
 All of the command run on the git bash, $ sign means running on your local machine. On the other hand,  # signs means running on the server
-## Creating SSH Keys
+# Creating SSH Keys
 Generate a key on your local machine, I'm using git bash
 ```
 $ ssh-keygen
@@ -81,7 +81,7 @@ It will ask for password . add the user name you want it, and some other persona
 # adduser henry_huang
 ```
 
-# Give root privileges
+## Give root privileges
 ```
 # usermod -aG sudo djangoadmin
 ```
@@ -117,21 +117,121 @@ ps: the public ssh key must be same
 Now you should log in  as new user successfully
 $ ssh henry_huang@YOUR_SERVER_IP
 
-# Disable root login
+## Disable root login
 ```
-sudo nano /etc/ssh/sshd_config
+# sudo nano /etc/ssh/sshd_config
 ```
 
-# Change the following
+## Change the following
 ```
 PermitRottLogin no
 PasswordAuthentication no
 ```
 
-# Reload sshd service
+## Reload sshd service
 ```
-sudo systemctl realod sshd
+# sudo systemctl realod sshd
 ```
+
+# Simple Firewall Setup
+See which apps are registered with firewall
+```
+# sudo ufw app list
+```
+Allow OpenSSH
+```
+# sudo ufw allow OpenSSH
+```
+## Enable firewall
+```
+sudo ufw enable
+```
+## To check status
+```
+# sudo ufw status
+```
+This is the basic step to deploy the server, no matter what app you runs on. For instance,  Ruby on rails, Node.js, Django, php and so on .
+
+# Software
+
+## Update packages
+```
+# sudo apt update
+# sudo apt upgrade
+```
+## Install Python 3, Postgres & NGINX
+```
+# sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+```
+
+# POstgres Ddatabase & User Setup
+```
+# sudo -u postgres psql
+```
+you should now be logged into the pg shell
+## Create a database
+```
+CREATE DATABASE user_database ;
+```
+
+## Create a user
+```
+CREATEUSER dbuser WITH PASSWORD 'supersecret1234' ;
+```
+
+## Set default encoding, transaction isolation scheme
+```
+ALTER ROLE dbuser SET client_encoding TO 'utf8' ;
+ALTER ROLE dbuser SET default_transaction_isolation TO 'read_committed' ;
+ALTER ROLE dbuser SET timezone TO 'UTC' ;
+```
+
+## Give Users access to datbase
+```
+GRANT ALL PRIVILLEGES ON DATABASEmcrt TO dbadmin
+```
+
+# Time for django!!!
+
+# Virtual Environment
+## Need to install the python3-venv package
+```
+# sudo apt install python3-venv
+```
+## Create project directory
+make this files in order to prevent you have other application using language that exclude the python 
+```
+# mkdir pyapps
+# cd pyapps
+```
+## Create venv
+```
+# python3 -m venv ./venv
+```
+## Activate the environment
+```
+# source venv/bin/activate
+```
+
+# Git & Upload
+
+## Pip dependencies
+From your local machine, create a requirements.txt with your app dependencies. Make sure you push this to your repo
+```
+$ pip freeze > requirements.txt
+```
+## Clone the prorject into the app folder on your server(Either HTTPS or setup SSH keys)
+```
+# git clone https://github.com/Mchighlight/django-basic-practice.git
+```
+## Install pip modules from requirements
+you could manually install each one as well
+```
+# pip install -r equirements.txt
+```
+# Local Settings Setup
+
+
 
 
 
