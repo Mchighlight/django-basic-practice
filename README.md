@@ -30,6 +30,14 @@ Migrations
 ```
 python manage.py makemigrations && python manage.py migrate
 ```
+Create superuser
+```
+python manage.py createsuperuser
+```
+collect static file
+```
+python manage.py collectstatic
+```
 Load database data 
 ```
 python manage.py loaddata \realtor\fixture.json && 
@@ -231,8 +239,57 @@ you could manually install each one as well
 ```
 # Local Settings Setup
 
+Add code to your settings.py file and push to server
+```
+try:
+    from .local_settings import *
+except:
+    pass
+```
+
+Create a file called localsettings.py on your server along side of settings.py and add the following
+* SECRET_KEY
+* ALLOWED_HOSTED
+* DATABASES
+* DEBUG
+* EMAIL_*
+
+## Run Migrations
+```
+# python manage.py makemigrations
+# python manage.py migrate
+```
+
+## Create super user
+```
+# python manage.py createsuperuser
+```
+
+## Create static file
+```
+# python manage.py collectstatic
+```
+## Create exception for port 8000
+```
+# sudo ufw allow 8000
+```
+
+# Run server
+```
+# python manage.py runserver 0.0.0.0:8000
+```
+
+### Test the site at YOUR_SERVER_IP:8000
 
 
+# Gunicorn Setup
+Install gunicorn
+```
+# pip install gunicorn
+```
+
+## More Instruction check the digital ocean 
+ https://do.co/2TeBsmq
 
 
 
